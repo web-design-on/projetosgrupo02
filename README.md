@@ -98,4 +98,4 @@ A primeira sprint teve como objetivo estruturar o início do projeto ReUse, defi
 * [Natali Schers](https://github.com/natali-schers)
 * [Sarah Maranhão](https://github.com/smaranha)
 * [Rebeca Soares](https://github.com/Rebeca-Soares)
-* [Stephanie Cruz](https://github.com/Web-D-on)
+* [Stephanie Cruz](https://github.com/SteryMoon)
