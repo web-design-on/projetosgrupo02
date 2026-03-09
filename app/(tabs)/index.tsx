@@ -1,27 +1,56 @@
-
-import ThemedButton from '@/components/themed-button';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { StyleSheet, View } from 'react-native';
+import InfoCard from "@/components/InfoCard";
+import ThemedButton from "@/components/themed-button";
+import { ThemedView } from "@/components/themed-view";
+import { Image, StyleSheet, View } from "react-native";
 
 export default function Index() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText>Hello, World!</ThemedText>
 
-      <View style={styles.buttonContainer}>
-        <ThemedButton title="Hello, Button!" onPress={() => alert('Hello, Dev!')} />
-      </View>
-    </ThemedView>
+  <Image
+    source={require("@/assets/images/logo.png")}
+    style={styles.logo}
+  />
+
+  <View style={styles.cardArea}>
+    <InfoCard />
+  </View>
+
+  <View style={styles.buttonContainer}>
+    <ThemedButton
+      title="Hello, Button!"
+      onPress={() => alert("Hello, Dev!")}
+    />
+  </View>
+
+  </ThemedView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    margin: 16,
-    padding: 16,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 70,
   },
+
+  logo: {
+    width: 250,
+    height: 250,
+    marginBottom: 10,
+    resizeMode: "contain",
+  },
+
   buttonContainer: {
     marginTop: 16,
   },
+
+  cardArea: {
+  width: "100%",
+  alignItems: "center",
+  marginTop: -100,
+  overflow: "visible",
+  },
+
 });

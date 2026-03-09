@@ -1,14 +1,26 @@
-import { Tabs } from 'expo-router';
-import React, { ComponentProps } from 'react';
-import { View, StyleSheet, Platform } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { useThemeColor } from '@/hooks/use-theme-color';
+import { Poppins_400Regular, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
+import { Ionicons } from '@expo/vector-icons';
+import { useFonts } from 'expo-font';
+import { Tabs } from 'expo-router';
+import { ComponentProps } from 'react';
+import { Platform, StyleSheet, View } from 'react-native';
 
 export default function TabLayout() {
-  const activeColor = useThemeColor({}, 'text'); 
+
+  const [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+    Poppins_600SemiBold,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
+  const activeColor = useThemeColor({}, 'text');
   const inactiveColor = useThemeColor({}, 'tint');
   const bgColor = useThemeColor({}, 'background');
-  const borderColor = '#E5E5E5'; 
+  const borderColor = '#E5E5E5';
 
   return (
     <Tabs
